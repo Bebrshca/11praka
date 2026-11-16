@@ -23,6 +23,23 @@ namespace TimeLord_Комарова
         public MainWindow()
         {
             InitializeComponent();
+
+            OpenPages(pages.stopwatch); // открываем страницу секундомера
+        }
+
+        /// <summary>
+        /// перечесляемый тип страниц
+        /// </summary>
+        public enum pages
+        {
+            stopwatch 
+        }
+
+
+        public void OpenPages(pages _page)
+        {
+            if (_page == pages.stopwatch) 
+                frame.Navigate(new Pages.Stopwatch()); 
         }
     }
 }
