@@ -54,7 +54,12 @@ namespace TimeLord_Комарова.Pages
 
             time.Content = s_hours + ":" + s_minutes + ":" + s_seconds; 
         }
-
+        //интервал
+        private void AddInterval(object sender, RoutedEventArgs e)
+        {
+            if (time.Content.ToString() == "00:00:00") return;
+            lv_Intervals.Items.Add(time.Content.ToString());
+        }
         private void StartStopwatch(object sender, RoutedEventArgs e)
         {
             if (start_stopwatch == false) 
